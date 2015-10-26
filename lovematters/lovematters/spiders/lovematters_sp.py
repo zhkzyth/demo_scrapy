@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
+
 import re
 import json
 
@@ -12,10 +13,10 @@ from bs4 import BeautifulSoup
 
 from lovematters.items import LoveMattersItem
 from misc.log import (
-    warn, info, debug
+    warn, info
 )
 from misc.utils import (
-   iso_time_to_utc_timestamp
+    iso_time_to_utc_timestamp
 )
 
 
@@ -190,17 +191,17 @@ class LoveMattersSpider(CrawlSpider):
             desc_img = img_url
 
         return {
-            "content":{
-                "url":desc_img,
-                "height":0,
-                "width":0,
+            "content": {
+                "url": desc_img,
+                "height": 0,
+                "width": 0,
             },
-            "type":"image"
+            "type": "image"
         }
 
     def _prepare_description(self, raw_description):
 
-        return {"content":raw_description, "type":"text"}
+        return {"content": raw_description, "type": "text"}
 
     def _prepare_text_content(self, content):
         return {
@@ -217,9 +218,9 @@ class LoveMattersSpider(CrawlSpider):
 
         return {
             "type": "image",
-            "content":{
+            "content": {
                 "url": real_url,
-                "width":0,
+                "width": 0,
                 "height": 0
                 }
             }

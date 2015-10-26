@@ -1,17 +1,15 @@
-# Scrapy settings for lovematters project
-#
-# For simplicity, this file contains only the most important settings by
-# default. All the other settings are documented here:
-#
-#     http://doc.scrapy.org/en/latest/topics/settings.html
-#
+#!/usr/bin/env python
+# encoding: utf-8
 
 import sys
 import os
 from os.path import dirname
+
 path = dirname(dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.append(path)
+
 from misc.log import *
+
 
 BOT_NAME = 'lovematters'
 
@@ -30,6 +28,6 @@ LOG_LEVEL = 'INFO'
 MAX_COMMENT_NUM = 20
 
 MYSQL_HOST = 'localhost'
-MYSQL_DBNAME = 'bra'
+MYSQL_DBNAME = 'spider_test'
 MYSQL_USER = 'root'
 MYSQL_PASSWD = ''

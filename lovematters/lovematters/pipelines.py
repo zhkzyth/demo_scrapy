@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
+
 import time
 from hashlib import md5
 
 # TODO custom log module
 from scrapy import log
-from scrapy.exceptions import DropItem
-from scrapy import signals
 from twisted.enterprise import adbapi
 
 
@@ -18,15 +17,6 @@ class MySQLStorePipeline(object):
 
     def __init__(self, dbpool):
         self.dbpool = dbpool
-
-    # @classmethod
-    # def from_crawler(cls, crawler):
-
-    #     pipeline = cls()
-    #     crawler.signals.connect(pipeline.spider_opened, signals.spider_opened)
-    #     crawler.signals.connect(pipeline.spider_closed, signals.spider_closed)
-
-    #     return pipeline
 
     def spider_opened(self, spider):
         pass

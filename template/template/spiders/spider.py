@@ -1,16 +1,13 @@
-import re
-import json
-from urlparse import urlparse
-import urllib
-
+#!/usr/bin/env python
+# encoding: utf-8
 
 from scrapy.selector import Selector
+
 try:
     from scrapy.spider import Spider
 except:
     from scrapy.spider import BaseSpider as Spider
-from scrapy.utils.response import get_base_url
-from scrapy.contrib.spiders import CrawlSpider, Rule
+from scrapy.contrib.spiders import Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor as sle
 
 
